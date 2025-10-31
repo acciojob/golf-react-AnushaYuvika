@@ -15,7 +15,9 @@ class App extends Component {
     };
 
     buttonClickHandler() {
-        this.setState({renderBall: true});
+        this.setState({ renderBall: true }, () => {
+            document.addEventListener("keydown", this.handleKeyDown);
+        });
     }
 
     handleKeyDown(event) {
