@@ -24,6 +24,7 @@ class App extends Component {
         if (event.key === "ArrowRight" && this.state.renderBall) {
         this.setState((prevState) => {
             const newPos = prevState.posi + 5;
+            console.log("New position ==> ", newPos);
             return {
             posi: newPos,
             ballPosition: { left: newPos + "px" },
